@@ -1,0 +1,51 @@
+[0m18:34:14.510063 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9249845a30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f92492fe970>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f92492feac0>]}
+
+
+============================== 18:34:14.513797 | ea9edaf8-54d1-48e1-89c1-54a9bbd3569c ==============================
+[0m18:34:14.513797 [info ] [MainThread]: Running with dbt=1.7.6
+[0m18:34:14.514314 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/Users/miles/.dbt', 'fail_fast': 'False', 'debug': 'False', 'log_path': 'logs', 'warn_error': 'None', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'invocation_command': 'dbt init norwinds_dbt', 'log_format': 'default', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m18:34:14.514820 [warn ] [MainThread]: [ConfigFolderDirectory]: Unable to parse dict {'dir': PosixPath('/Users/miles/.dbt')}
+[0m18:34:14.515100 [info ] [MainThread]: Creating dbt configuration folder at 
+[0m18:34:14.516107 [debug] [MainThread]: Starter project path: /Users/miles/Development/Jigsaw/dbt/dbt-core-setup-northwinds/dbt-core/lib/python3.9/site-packages/dbt/include/starter_project
+[0m18:34:14.519939 [info ] [MainThread]: 
+Your new dbt project "norwinds_dbt" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m18:34:14.520410 [info ] [MainThread]: Setting up your profile.
+[0m18:34:27.924111 [error] [MainThread]: Encountered an error:
+
+[0m18:34:27.928336 [error] [MainThread]: Traceback (most recent call last):
+  File "/Users/miles/Development/Jigsaw/dbt/dbt-core-setup-northwinds/dbt-core/lib/python3.9/site-packages/dbt/cli/requires.py", line 91, in wrapper
+    result, success = func(*args, **kwargs)
+  File "/Users/miles/Development/Jigsaw/dbt/dbt-core-setup-northwinds/dbt-core/lib/python3.9/site-packages/dbt/cli/requires.py", line 76, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/miles/Development/Jigsaw/dbt/dbt-core-setup-northwinds/dbt-core/lib/python3.9/site-packages/dbt/cli/main.py", line 515, in init
+    results = task.run()
+  File "/Users/miles/Development/Jigsaw/dbt/dbt-core-setup-northwinds/dbt-core/lib/python3.9/site-packages/dbt/task/init.py", line 344, in run
+    self.setup_profile(profile_name)
+  File "/Users/miles/Development/Jigsaw/dbt/dbt-core-setup-northwinds/dbt-core/lib/python3.9/site-packages/dbt/task/init.py", line 263, in setup_profile
+    adapter = self.ask_for_adapter_choice()
+  File "/Users/miles/Development/Jigsaw/dbt/dbt-core-setup-northwinds/dbt-core/lib/python3.9/site-packages/dbt/task/init.py", line 244, in ask_for_adapter_choice
+    numeric_choice = click.prompt(prompt_msg, type=click.INT)
+  File "/Users/miles/Development/Jigsaw/dbt/dbt-core-setup-northwinds/dbt-core/lib/python3.9/site-packages/click/termui.py", line 164, in prompt
+    value = prompt_func(prompt)
+  File "/Users/miles/Development/Jigsaw/dbt/dbt-core-setup-northwinds/dbt-core/lib/python3.9/site-packages/click/termui.py", line 147, in prompt_func
+    raise Abort() from None
+click.exceptions.Abort
+
+[0m18:34:27.967247 [debug] [MainThread]: Resource report: {"command_name": "init", "command_wall_clock_time": 13.4875965, "process_user_time": 1.41904, "process_kernel_time": 0.133812, "process_mem_max_rss": "92803072", "command_success": false, "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m18:34:27.969164 [debug] [MainThread]: Command `dbt init` failed at 18:34:27.968542 after 13.49 seconds
+[0m18:34:27.970021 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9249845a30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f92492ebe20>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f92493235b0>]}
+[0m18:34:27.970681 [debug] [MainThread]: Flushing usage events
