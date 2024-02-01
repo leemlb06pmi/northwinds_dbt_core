@@ -1,4 +1,4 @@
-WITH souce AS (
+WITH source AS (
     SELECT * FROM public.customers
 ),
 renamed AS (
