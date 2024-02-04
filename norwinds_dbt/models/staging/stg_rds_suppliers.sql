@@ -1,5 +1,5 @@
 WITH source AS (
-    SELECT * FROM public.suppliers
+    SELECT * FROM {{ source('rds', 'suppliers') }}
 ), 
 renamed AS (
     SELECT supplier_id, company_name, 
