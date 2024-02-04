@@ -1,0 +1,10 @@
+version: 2
+sources:
+  - name: int
+    database: northwinds
+    schema: dev
+    tables:
+      - name: stg_hubspot_contacts
+      - name: stg_rds_customers
+      - name: stg_hubspot_companies
+      - name: stg_rds_companies
