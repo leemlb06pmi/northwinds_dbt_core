@@ -2,7 +2,7 @@ WITH source AS (
     SELECT * FROM {{source('rds', 'customers')}}
 ),
 companies AS (
-    SELECT * FROM dev.stg_rds_companies
+    SELECT * FROM {{ ref('stg_rds_companies') }}
 ),
 renamed AS (
     SELECT 
