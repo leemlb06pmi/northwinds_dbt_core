@@ -1,5 +1,5 @@
 WITH source AS (
-    SELECT * FROM public.customers
+    SELECT * FROM {{source('rds', 'customers')}}
 ),
 renamed AS (
     SELECT customer_id, country,
