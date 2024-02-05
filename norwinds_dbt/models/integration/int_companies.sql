@@ -28,4 +28,6 @@ final AS (
     GROUP BY m.name
 )
 
-SELECT * FROM final
+SELECT {{dbt_utils.generate_surrogate_key(['name'])}} AS company_pk, hubspot_company_id, rds_company_id,
+    name, address, city, postal_code, country
+FROM final
