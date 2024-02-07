@@ -44,6 +44,11 @@ with merged_companies as (
         {%endif%}
     {%endfor%}
 ),
+deduped as (
+    select max(hubspot_company_id) as hubspot_company_id, max(rds_company_id) as rds_company_id, name
+    from merged_companies
+    group by name
+),
 final AS (
     SELECT
     MAX(m.hubspot_company_id) as hubspot_company_id,
@@ -53,7 +58,7 @@ final AS (
     MAX(r.city) as city, 
     MAX(r.postal_code) as postal_code, 
     MAX(r.country) as country
-    FROM merged_companies m
+    FROM deduped m
     LEFT JOIN {{ref('stg_rds_companies')}} r
         ON r.name = m.name
     GROUP BY m.name
