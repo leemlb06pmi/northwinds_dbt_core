@@ -7,3 +7,5 @@ sources:
       - name: customers
       - name: suppliers
       - name: shippers
+      - name: orders
+      - name: order_details

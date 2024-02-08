@@ -1,0 +1,31 @@
+version: 2
+
+models: 
+  - name: orders_fact
+    columns:
+      - name: order_pk
+        tests:
+          - not_null
+          - unique
+      - name: contact_pk
+        tests:
+          - relationships:
+              to: ref('mart_contacts_dim')
+              field: contact_pk
+  - name: mart_contacts_dim
+    columns:
+      - name: contact_pk
+        tests:
+          - not_null
+          - unique
+      - name: company_pk
+        tests:
+          - relationships:
+              to: ref('mart_companies_dim')
+              field: company_pk
+  - name: mart_companies_dim
+    columns:
+      - name: company_pk
+        tests:
+          - not_null
+          - unique

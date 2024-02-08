@@ -1,0 +1,21 @@
+version: 2
+
+models: 
+  - name: int_orders
+    columns:
+      - name: order_pk
+        tests:
+          - not_null
+          - unique
+  - name: int_contacts
+    columns:
+      - name: contact_pk
+        tests:
+          - not_null
+          - unique
+  - name: int_companies
+    columns:
+      - name: company_pk
+        tests:
+          - not_null
+          - unique

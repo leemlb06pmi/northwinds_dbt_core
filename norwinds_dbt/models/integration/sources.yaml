@@ -8,3 +8,4 @@ sources:
       - name: stg_rds_customers
       - name: stg_hubspot_companies
       - name: stg_rds_companies
+      - name: stg_orders
