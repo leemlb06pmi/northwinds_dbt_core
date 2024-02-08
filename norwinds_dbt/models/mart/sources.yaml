@@ -6,3 +6,4 @@ sources:
     tables:
       - name: int_companies
       - name: int_contacts
+      - name: int_orders
